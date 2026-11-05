@@ -1,0 +1,32 @@
+name: Apply Averon
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack and copy
+        run: |
+          mkdir tmp
+          unzip -o averon-theme-pack.zip -d tmp
+          unzip -o averon-extras-pack.zip -d tmp
+          M=$(find . -path ./tmp -prune -o -path '*/src/main/AndroidManifest.xml' -print | head -1)
+          MAIN=$(dirname "$M")
+          echo "Using $MAIN"
+          mkdir -p "$MAIN/res" "$MAIN/java"
+          cp -r tmp/averon-theme-pack/res/. "$MAIN/res/"
+          cp -r tmp/averon-theme-pack/java/. "$MAIN/java/"
+          cp -r tmp/averon-extras/android/res/. "$MAIN/res/"
+          cp -r tmp/averon-extras/android/java/. "$MAIN/java/"
+          mkdir -p averon-backend
+          cp -r tmp/averon-extras/admin-backend/. averon-backend/
+          rm -rf tmp
+      - name: Commit
+        run: |
+          git config user.name "averon-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Apply Averon pack" || echo "nothing to commit"
+          git push
