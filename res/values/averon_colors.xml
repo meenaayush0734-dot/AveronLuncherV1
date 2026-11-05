@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="averon_black">#FF000000</color>
+    <color name="averon_surface">#FF0B0710</color>
+    <color name="averon_card">#FF120B1C</color>
+    <color name="averon_purple">#FF7B2FFF</color>
+    <color name="averon_purple_dark">#FF4A148C</color>
+    <color name="averon_purple_light">#FFB388FF</color>
+    <color name="averon_border">#807B2FFF</color>
+    <color name="averon_text">#FFF3E9FF</color>
+    <color name="averon_text_dim">#FF9E8FB5</color>
+</resources>

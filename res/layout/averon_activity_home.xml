@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="20dp"
+    android:background="@drawable/averon_bg_splash">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="AVERON" android:textSize="34sp" android:textStyle="bold"
+        android:letterSpacing="0.2" android:textColor="@color/averon_purple_light" />
+    <TextView android:id="@+id/averonNotice" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:textColor="@color/averon_text_dim"
+        android:layout_marginTop="6dp" android:text="Java Edition Launcher" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp" android:layout_marginTop="24dp"
+        android:background="@drawable/averon_bg_card">
+        <EditText android:id="@+id/averonName" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Offline username"
+            android:textColor="@color/averon_text" android:textColorHint="@color/averon_text_dim"
+            android:singleLine="true" />
+        <Spinner android:id="@+id/averonVersion" android:layout_width="match_parent"
+            android:layout_height="48dp" android:layout_marginTop="8dp" />
+        <Button android:id="@+id/averonPlay" style="@style/Widget.Averon.Button"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="16dp" android:text="PLAY" />
+        <Button android:id="@+id/averonAdvanced" style="@style/Widget.Averon.Button"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:layout_marginTop="8dp" android:text="Advanced options" />
+    </LinearLayout>
+
+    <FrameLayout android:id="@+id/averonFragmentHost" android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="averon_renderer_names">
+        <item>GL4ES (fast, most compatible)</item>
+        <item>Zink (Vulkan, newer versions)</item>
+        <item>ANGLE</item>
+    </string-array>
+    <string-array name="averon_renderer_values">
+        <item>gl4es</item>
+        <item>zink</item>
+        <item>angle</item>
+    </string-array>
+    <string-array name="averon_java_names">
+        <item>Java 8</item>
+        <item>Java 17</item>
+        <item>Java 21</item>
+    </string-array>
+    <string-array name="averon_java_values">
+        <item>8</item>
+        <item>17</item>
+        <item>21</item>
+    </string-array>
+</resources>

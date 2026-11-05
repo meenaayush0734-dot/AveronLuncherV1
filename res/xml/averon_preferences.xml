@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="Performance">
+        <SeekBarPreference app:key="averon_ram_mb" app:title="RAM allocation (MB)"
+            app:defaultValue="1536" app:min="512" app:seekBarIncrement="128"
+            app:showSeekBarValue="true" android:max="6144" />
+        <ListPreference app:key="averon_renderer" app:title="Renderer"
+            app:entries="@array/averon_renderer_names"
+            app:entryValues="@array/averon_renderer_values"
+            app:defaultValue="gl4es" app:useSimpleSummaryProvider="true" />
+        <ListPreference app:key="averon_java" app:title="Java version"
+            app:entries="@array/averon_java_names"
+            app:entryValues="@array/averon_java_values"
+            app:defaultValue="17" app:useSimpleSummaryProvider="true" />
+        <SeekBarPreference app:key="averon_res_scale" app:title="Resolution scale (%)"
+            app:defaultValue="100" app:min="25" app:seekBarIncrement="5"
+            app:showSeekBarValue="true" android:max="100" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Advanced">
+        <EditTextPreference app:key="averon_jvm_args" app:title="Custom JVM arguments"
+            app:defaultValue="" app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat app:key="averon_fps_counter" app:title="FPS counter"
+            app:defaultValue="false" />
+        <SwitchPreferenceCompat app:key="averon_show_logs" app:title="Show game log on launch"
+            app:defaultValue="false" />
+        <SwitchPreferenceCompat app:key="averon_keep_screen_on" app:title="Keep screen on"
+            app:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Averon" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/averon_purple</item>
+        <item name="colorPrimaryDark">@color/averon_black</item>
+        <item name="colorSecondary">@color/averon_purple_dark</item>
+        <item name="colorAccent">@color/averon_purple_light</item>
+        <item name="android:windowBackground">@color/averon_black</item>
+        <item name="android:statusBarColor">@color/averon_black</item>
+        <item name="android:navigationBarColor">@color/averon_black</item>
+        <item name="android:textColorPrimary">@color/averon_text</item>
+        <item name="android:textColorSecondary">@color/averon_text_dim</item>
+        <item name="materialButtonStyle">@style/Widget.Averon.Button</item>
+    </style>
+
+    <style name="Widget.Averon.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/averon_bg_button</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/averon_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">14dp</item>
+    </style>
+
+    <style name="Theme.Averon.Splash" parent="Theme.Averon">
+        <item name="android:windowBackground">@drawable/averon_bg_splash</item>
+    </style>
+</resources>
